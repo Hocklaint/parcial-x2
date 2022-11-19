@@ -25,9 +25,9 @@ server.wsgi_app = WhiteNoise(server.wsgi_app, root='static')
 app.title = "Sensores IA"
 
 # Data - CSV
-csv = 'https://github.com/Hocklaint/Parcial_IA_render/blob/f9daed8698f55e1dacadbaece5a870562cadd5c3/src/Magnetometro.csv?raw=true'
-csv_luz= 'https://github.com/Hocklaint/Parcial_IA_render/blob/f9daed8698f55e1dacadbaece5a870562cadd5c3/src/Luz.csv?raw=true'
-csv_acelerometro= 'https://github.com/Hocklaint/Parcial_IA_render/blob/f9daed8698f55e1dacadbaece5a870562cadd5c3/src/Acelerometro.csv?raw=true'
+csv = 'https://github.com/Hocklaint/parcial-x2/blob/main/Magnetometro.csv?raw=true'
+csv_luz= 'https://github.com/Hocklaint/parcial-x2/blob/main/Luz.csv?raw=true'
+csv_acelerometro= 'https://github.com/Hocklaint/parcial-x2/blob/main/Acelerometro.csv?raw=true'
 
 #CSS
 
