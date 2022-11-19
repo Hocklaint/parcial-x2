@@ -3,9 +3,10 @@
 # Rojas Ruiz Cristopher Edison 
 
 
-from turtle import position
 
-import plotly.express as px
+
+#import plotly.express as px
+from whitenoise import WhiteNoise
 import dash
 from dash import dcc
 from dash import html
@@ -17,16 +18,19 @@ from datetime import datetime
 
 
 app = dash.Dash(__name__, meta_tags=[{"name": "viewport", "content": "width=device-width"}])
+server = app.server
+server.wsgi_app = WhiteNoise(server.wsgi_app, root='static')
 
-app._favicon = "/assets/favicon.ico"
+#app._favicon = "assets/favicon.ico"
 app.title = "Sensores IA"
 
 # Data - CSV
-csv = 'Magnetometro.csv'
-csv_luz= 'Luz.csv'
-csv_acelerometro= 'Acelerometro.csv'
+csv = 'https://github.com/Hocklaint/Parcial_IA_render/blob/f9daed8698f55e1dacadbaece5a870562cadd5c3/src/Magnetometro.csv?raw=true'
+csv_luz= 'https://github.com/Hocklaint/Parcial_IA_render/blob/f9daed8698f55e1dacadbaece5a870562cadd5c3/src/Luz.csv?raw=true'
+csv_acelerometro= 'https://github.com/Hocklaint/Parcial_IA_render/blob/f9daed8698f55e1dacadbaece5a870562cadd5c3/src/Acelerometro.csv?raw=true'
 
 #CSS
+
 tabs_styles = {
     "flexDirection": "row",
 }
